@@ -1,0 +1,26 @@
+{
+  "name": "promisearray",
+  "version": "1.0.0",
+  "description": "Turns array of promises to a promise of array",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StrajnarFilip/PromiseArray.git"
+  },
+  "author": "Filip Strajnar",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/StrajnarFilip/PromiseArray/issues"
+  },
+  "homepage": "https://github.com/StrajnarFilip/PromiseArray#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "ts-node": "^10.4.0"
+  }
+}
