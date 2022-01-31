@@ -7,4 +7,9 @@ Change array of promises to promise of array.
 # Usage
 ```ts
 import { ArrayOfPromisesToPromiseArray } from "promises-to-array"
+
+// Assumes yourPromises is an array of Promises<AnyType>, for example
+// from making many fetch requests
+
+const promiseOfArray=ArrayOfPromisesToPromiseArray(yourPromises)
 ```
