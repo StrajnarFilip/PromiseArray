@@ -1,5 +1,5 @@
 {
-  "name": "promisearray",
+  "name": "promises-to-array",
   "version": "1.0.0",
   "description": "Turns array of promises to a promise of array",
   "main": "index.js",
