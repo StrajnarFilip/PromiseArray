@@ -51,12 +51,23 @@ function ConcatenatePromiseRecursively(tailArray, aggregatingArray) {
         });
     });
 }
+/**
+ * Converts Array of promises to a single promise with an array of values.
+ * The function uses recursion. It's safe to put in an empty array.
+ * @param promises Array of promises, each containing value of type T
+ * @returns Promise of an array, containing the values that each promise had
+ */
 function ArrayOfPromisesToPromiseArray(promises) {
     return new Promise(function (resolve, reject) {
         resolve(ConcatenatePromiseRecursively(promises));
     });
 }
 exports.ArrayOfPromisesToPromiseArray = ArrayOfPromisesToPromiseArray;
+/**
+ * Simply converts any value of type T to a promise of itself
+ * @param paramIn Regular value
+ * @returns Value as a promise
+ */
 function toPromise(paramIn) {
     return new Promise(function (resolve, reject) { resolve(paramIn); });
 }

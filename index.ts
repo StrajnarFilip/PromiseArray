@@ -60,6 +60,12 @@ function ConcatenatePromiseRecursively<T>(
     })
 }
 
+/**
+ * Converts Array of promises to a single promise with an array of values.
+ * The function uses recursion. It's safe to put in an empty array.
+ * @param promises Array of promises, each containing value of type T
+ * @returns Promise of an array, containing the values that each promise had
+ */
 export function ArrayOfPromisesToPromiseArray<T>(
     promises: Array<Promise<T>>
 ): Promise<Array<T>> {
@@ -70,6 +76,11 @@ export function ArrayOfPromisesToPromiseArray<T>(
     })
 }
 
+/**
+ * Simply converts any value of type T to a promise of itself
+ * @param paramIn Regular value
+ * @returns Value as a promise
+ */
 export function toPromise<T>(paramIn: T): Promise<T> {
     return new Promise<T>((resolve, reject) => { resolve(paramIn) })
 }
