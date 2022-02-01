@@ -6,10 +6,11 @@ Change array of promises to promise of array.
 
 # Usage
 
-Install from NPM:
+[View on NPM](https://www.npmjs.com/package/promises-to-array)
+Install from NPM: 
 
 ```
-https://www.npmjs.com/package/promises-to-array
+npm i promises-to-array
 ```
 
 ```ts
