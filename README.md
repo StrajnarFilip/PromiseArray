@@ -16,21 +16,24 @@ const promiseOfArray=ArrayOfPromisesToPromiseArray(yourPromises)
 
 # Example
 ```ts
-    const one = new Promise((resolve, reject) => { resolve(1) })
-    const two = new Promise((resolve, reject) => { resolve(2) })
-    const three = new Promise((resolve, reject) => { resolve(3) })
-    const four = new Promise((resolve, reject) => { resolve(4) })
-    const five = new Promise((resolve, reject) => { resolve(5) })
+import { ArrayOfPromisesToPromiseArray } from "promises-to-array"
 
-    const testingArray = [
-        one, two, three,
-        four, five
-    ]
+const one: Promise<number> = new Promise((resolve, reject) => { resolve(1) })
+const two: Promise<number> = new Promise((resolve, reject) => { resolve(2) })
+const three: Promise<number> = new Promise((resolve, reject) => { resolve(3) })
+const four: Promise<number> = new Promise((resolve, reject) => { resolve(4) })
+const five: Promise<number> = new Promise((resolve, reject) => { resolve(5) })
 
-    ArrayOfPromisesToPromiseArray(testingArray)
-        .then(wholeArray => {
-            // Do whatever with regular .map , .filter ...
-        })
+const testingArray: Array<Promise<number>> = [
+    one, two, three,
+    four, five
+]
+
+ArrayOfPromisesToPromiseArray<number>(testingArray)
+    .then(wholeArray => {
+        // Do whatever with regular .map , .filter ...
+        console.log(wholeArray.filter(x => x > 3))
+    })
 ```
 
 # Example 2
